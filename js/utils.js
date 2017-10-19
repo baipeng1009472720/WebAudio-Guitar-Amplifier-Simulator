@@ -24,8 +24,7 @@ function loadSample(audioContext, url){
         fetch(url)
         .then((response) => {
             return response.arrayBuffer();
-        })
-        .then((buffer) =>{
+        }).then((buffer) =>{
             audioContext.decodeAudioData(buffer, (decodedAudioData) =>{
                 resolve(decodedAudioData);
             });
